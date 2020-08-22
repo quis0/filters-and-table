@@ -2,6 +2,8 @@
 
 *Read this in other languages: [English](README.md), [Русский](README.ru.md)*
 
+### Current version: 1.0.1 :white_check_mark:
+
 ### About
 Filters & Table &ndash; small SPA where you can filter person information and sorting (ascending and descending) table with this information.
 

@@ -1,10 +1,9 @@
 <div class="filters">
-  <div class="filters__cell" *ngIf="currentFilters.city">
-    <h2 class="filters__header">City</h2>
-    <div class="filters__item" *ngFor="let filter of currentFilters.city | keyvalue">
+  <div class="filters__cell" *ngIf="currentFilters.gender">
+    <h2 class="filters__header">Gender</h2>
+    <div class="filters__item"*ngFor="let filter of currentFilters.gender | keyvalue">
       <input id="{{filter.key}}" class="filters__input" type="checkbox" (change)="onToggle(filter, $event)">{{filter.key}} ({{filter.value}})
     </div>
-
   </div>
 
   <div class="filters__cell" *ngIf="currentFilters.department">
@@ -14,9 +13,9 @@
     </div>
   </div>
 
-  <div class="filters__cell" *ngIf="currentFilters.gender">
-    <h2 class="filters__header">Gender</h2>
-    <div class="filters__item"*ngFor="let filter of currentFilters.gender | keyvalue">
+  <div class="filters__cell" *ngIf="currentFilters.city">
+    <h2 class="filters__header">City</h2>
+    <div class="filters__item" *ngFor="let filter of currentFilters.city | keyvalue">
       <input id="{{filter.key}}" class="filters__input" type="checkbox" (change)="onToggle(filter, $event)">{{filter.key}} ({{filter.value}})
     </div>
   </div>
