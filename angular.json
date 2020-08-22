@@ -121,8 +121,13 @@
               "devServerTarget": "ng-test-task:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {}
         }
       }
-    }},
+    }
+  },
   "defaultProject": "ng-test-task"
 }

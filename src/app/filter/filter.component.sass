@@ -1,0 +1,41 @@
+.filters
+  display: flex
+  justify-content: space-between
+  padding: 20px 0
+  box-sizing: border-box
+  margin-bottom: 20px
+  border-bottom: 1px solid rgba(10,0 ,0 ,.3 )
+
+
+.filters__header
+  margin-top: 0
+  margin-bottom: 20px
+  margin-left: 3px
+  font-size: 32px
+
+.filters__cell
+  margin: 0 auto
+
+.filters__item
+  display: flex
+  align-items: center
+  font-size: 16px
+
+.filters__input
+  cursor: pointer
+
+#address
+  display: none
+
+@media screen and (max-width:899px)
+  .filters
+    flex-direction: column
+  .filters__header
+    font-size: 24px
+    margin: 0 0 15px 0
+  .filters__item
+    margin-bottom: 15px
+  .filters__cell
+    width: 320px
+
+

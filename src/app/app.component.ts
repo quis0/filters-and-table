@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.sass']
 })
 export class AppComponent {
-  title = 'ng-test-task';
+  persons;
+  toggle(persons) {
+    this.persons = persons;
+  }
 }

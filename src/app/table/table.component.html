@@ -1,0 +1,16 @@
+<table class="table">
+  <tr>
+    <th class="table__heading" (click)="sortBy('name')">Name</th>
+    <th class="table__heading" (click)="sortBy('age')">Age</th>
+    <th class="table__heading" (click)="sortBy('gender')">Gender</th>
+    <th class="table__heading" (click)="sortBy('department')">Department</th>
+    <th class="table__heading table__heading_shrinkable" (click)="sortBy('address')">Address</th>
+  </tr>
+  <tr *ngFor="let person of persons">
+    <td class="table__cell">{{person.name}}</td>
+    <td class="table__cell">{{person.age}}</td>
+    <td class="table__cell">{{person.gender}}</td>
+    <td class="table__cell">{{person.department}}</td>
+    <td class="table__cell table__cell_shrinkable"> {{person.address.city}}, {{person.address.street}}</td>
+  </tr>
+</table>
