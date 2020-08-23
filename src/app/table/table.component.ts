@@ -55,6 +55,6 @@ export class TableComponent implements OnInit {
       this.currentColumnName = columnName;
       this.currentClicks = 0;
     }
-    this.persons = this.persons.sort(this.compare(columnName, this.currentClicks));
+    this.persons.sort(this.compare(columnName, this.currentClicks));
   }
 }
