@@ -28,7 +28,6 @@ export class FilterComponent implements OnInit {
   @Output() toggle = new EventEmitter<Person[]>();
 
   currentFilters: Filters = {};
-  allFilters: Filters = {};
   currentPersons: Person[] = [];
   checkedInputs = [];
   serverApi = new ServerApiService();
@@ -62,7 +61,6 @@ export class FilterComponent implements OnInit {
       response => {
         this.persons = response;
         this.calculateFilters();
-        this.allFilters = this.currentFilters;
         this.currentPersons = this.persons;
         this.toggle.emit(this.currentPersons);
       }
