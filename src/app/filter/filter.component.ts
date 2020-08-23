@@ -78,17 +78,15 @@ export class FilterComponent implements OnInit {
 
   }
 
-  removeFilter() {
+  filterPersons() {
     if (this.checkedInputs.length == 0) {
       this.currentPersons = this.persons;
-      this.renderFilters();
     } else {
       let arr = this.persons;
-      this.checkedInputs.forEach(checkbox => {
-        arr = arr.filter(elem => JSON.stringify(elem).includes(`"${checkbox}"`));
+      this.checkedInputs.forEach(property => {
+        arr = arr.filter(elem => JSON.stringify(elem).includes(`"${property}"`));
       })
       this.currentPersons = arr;
-      this.renderFilters();
     }
   }
 
@@ -114,7 +112,7 @@ export class FilterComponent implements OnInit {
       this.toggleCheckbox(filter);
     } else {
       this.toggleCheckbox(filter);
-      this.removeFilter();
+      this.filterPersons();
       this.renderFilters();
     }
     this.toggle.emit(this.currentPersons);
